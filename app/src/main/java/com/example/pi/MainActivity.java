@@ -1,5 +1,7 @@
 package com.example.pi;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void c(View view) {
-
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("http://maps.google.com/maps?&daddr="+lat+loc));
+        startActivity(intent);
     }
 }
